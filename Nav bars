@@ -1,0 +1,123 @@
+** basic structure**
+<!--Start Navigation --> 
+<div id="navigationbar">
+<ul id='navigationcss'>
+<li><a href="LINK1">Home</a></li> 
+<li><a href="LINK2">Category</a>
+<ul>
+<li><a href='LINK3'>SUB-CATEGORY-1</a></li>
+<li><a href='LINK4'>SUB-CATEGORY-2</a></li>
+</ul>
+</li>
+<li><a href="">Category</a></li>
+</ul>
+</div>   
+<!--End Navigation -->
+
+
+**Use this to add another link
+<li><a href="LINK2">Category</a></li>
+
+** For sub categories**
+<li><a href="LINK2">Category</a>
+<ul>
+<li><a href='LINK3'>SUB-CATEGORY-1</a></li>
+<li><a href='LINK4'>SUB-CATEGORY-2</a></li>
+</ul>
+</li>
+
+
+CSS
+
+/* Styles the first link in your menu */
+.tabs-inner .section:first-child ul {
+margin-top: -1px;
+border: none;
+}
+
+/* Styles the overall navigation bar */
+.tabs-inner .widget ul {
+background: #000000;
+border: none;
+text-align: center;
+}
+/* Styles the individual links */
+.tabs-inner .widget li a {
+font: 12px Arvo;
+border: none;
+color: #ffffff;
+}
+/* Styles the links when hovered over */
+.tabs-inner .widget li.selected a, .tabs-inner .widget li a:hover {
+color: #333333;
+background-color: #ffffff;
+text-decoration: none;
+}
+
+#navigationbar {
+width: 100%; /* change the width of the navigation bar */
+height: 35px; /* change the height of the navigation bar */
+}
+
+#navigationcss { 
+margin: 0 auto;
+padding: 0; 
+}
+
+#navigationcss ul { 
+float: none; 
+list-style: none; 
+margin: 0; 
+padding: 0; 
+overflow: visible; 
+}
+
+#navigationcss li a, #navigationcss li a:link, #navigationcss li a:visited {
+color: #ffffff; /* change color of the main links */
+display: block;
+margin: 0;
+padding: 10px 30px;  /* change the first number for the top/bottom spacing, and the second number for left/right spacing */
+}
+
+#navigationcss li a:hover, #navigationcss li a:active {
+color: #FF69B4 ; /* change the color of the links when hovered over */
+margin: 0;
+padding: 10px 30px; /* make sure these are the same as the section above! */
+}
+
+#navigationcss li li a, #navigationcss li li a:link, #navigationcss li li a:visited {
+background: #ffffff;  /* change the background color of the drop down box */
+width: 150px;
+color: #000000; /* change the color of the drop down links */
+float: none;
+margin: 0;
+padding: 7px 10px; /* similar to above, change for the spacing around the links */
+}
+
+#navigationcss li li a:hover, #navigationcss li li a:active {
+background: #FF69B4 ; /* change the background color of drop down items on hover */
+color: #ffffff; /* change the color of drop down links on hover */
+padding: 7px 10px;  /* keep these the same as the above section */
+}
+
+#navigationcss li {
+float: none; 
+display: inline-block; 
+list-style: none; 
+margin: 0; 
+padding: 0; 
+}
+
+#navigationcss li ul { 
+z-index: 9999; 
+position: absolute; 
+left: -999em; 
+height: auto; 
+width: 150px; 
+margin: 0;
+padding: 0;
+}
+
+#navigationcss li:hover ul, #navigationcss li li:hover ul, #navigationcss li li li:hover ul, #navigationcss li.sfhover ul, #navigationcss li li.sfhover ul, #navigationcss li li li.sfhover ul { 
+left: auto; 
+} 
